@@ -268,20 +268,20 @@
       </div>
       <div class="body-content">
         <!-- Texts section -->
-        <div class="h1">Halo [Nama Pelanggan],</div>
+        <div class="h1">Halo {{userFirstName}},</div>
         <div class="p">
           Terima kasih telah bertransaksi di Golroblox. Berikut merupakan detail
           pembayaran yang harus diselesaikan sebelum:
-          <b>31 Jul 2024 pukul 19:00:00</b>.
+          <b>{{date}} pukul {{time}}</b>. <!-- Format: 31 Jul 2024, 19:00:00 -->
         </div>
 
         <!-- Detail pembayaran section -->
         <div class="pembayaran-container">
-          <div class="p">Bank Permata</div>
-          <div class="bank-number">[NOMOR VIRTUAL ACCOUNT]</div>
+          <div class="p">{{bankName}}</div>
+          <div class="bank-number">{{virtualAccountNumber}}</div>
           <div class="total-pembayaran">
             <div class="p">Total yang harus dibayar:</div>
-            <div class="total-amount">Rp100.000</div>
+            <div class="total-amount">Rp{{totalPayment}}</div>
           </div>
         </div>
 
@@ -291,11 +291,11 @@
           <div class="table-container">
             <div class="row">
               <div class="label">ID Pesanan:</div>
-              <div class="value">[Nomor Pesanan]</div>
+              <div class="value">{{orderId}}</div>
             </div>
             <div class="row">
               <div class="label">Total Pembayaran:</div>
-              <div class="value">[Jumlah Total]</div>
+              <div class="value">Rp{{totalPayment}}</div>
             </div>
           </div>
         </div>
@@ -311,17 +311,10 @@
               </div>
             </div>
             <div class="table-content">
+              <!-- Loop -->
               <div class="row">
-                <div class="label">Ryan</div>
-                <div class="value">R$100</div>
-              </div>
-              <div class="row">
-                <div class="label">Ryan</div>
-                <div class="value">R$100</div>
-              </div>
-              <div class="row">
-                <div class="label">Ryan</div>
-                <div class="value">R$100</div>
+                <div class="label">{{username}}</div>
+                <div class="value">R${{robuxAmount}}</div>
               </div>
             </div>
           </div>
@@ -360,14 +353,14 @@
             atau kunjungi sosial media kami:
           </div>
           <div class="logo-container">
-            <a href="https://www.google.com/" target="_blank">
+            <a href="https://www.instagram.com/golroblox_/" target="_blank">
               <img src="instagram-logo.png" alt="instagram logo" />
             </a>
-            <a href="https://www.google.com/" target="_blank">
-              <img src="youtube-logo.png" alt="instagram logo" />
+            <a href="https://www.youtube.com/@golroblox" target="_blank">
+              <img src="youtube-logo.png" alt="youtube logo" />
             </a>
-            <a href="https://www.google.com/" target="_blank">
-              <img src="tiktok-logo.png" alt="instagram logo" />
+            <a href="https://www.tiktok.com/@golroblox_" target="_blank">
+              <img src="tiktok-logo.png" alt="tiktok logo" />
             </a>
           </div>
           <div class="p" id="copyright">

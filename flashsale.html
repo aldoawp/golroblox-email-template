@@ -323,15 +323,15 @@
           </div>
           <div class="p">
             Berlaku hingga:
-            <span id="flashsale-date"><b>23 Januari 2025</b></span>
+            <span id="flashsale-date"><b>{{flashsaleDate}}</b></span>
           </div>
         </div>
 
         <div class="p">
           Masukkan kode diskon berikut:
-          <span id="discount-code"><b>[KODE DISKON]</b></span> dan dapatkan
-          potongan harga sebesar <b>[PERSEN DISKON]</b> untuk setiap pembelian
-          robux.
+          <span id="discount-code"><b>{{discountCode}}</b></span> dan dapatkan
+          potongan harga sebesar <b>{{discountAmount}}</b> <!-- Bisa percentage atau jumlah fix --> untuk setiap 
+          pembelian robux.
         </div>
 
         <!-- Flashsale section -->
@@ -346,14 +346,18 @@
                 <div class="flashsale-img">
                   <img src="robux-logo-white.png" alt="robux logo" />
                 </div>
-                <div class="p">100 Robux</div>
+                <div class="p">{{robuxNominal}} Robux</div>
               </div>
               <div class="price">
-                <div class="p">Rp10.000</div>
-                <div class="p">Rp8.000</div>
+                <div class="p">Rp{{robuxInitialPrice}}</div>
+                <div class="p">Rp{{robuxDiscountedPrice}}</div>
               </div>
             </div>
-            <a href="https://golroblox.vercel.app/" class="flashsale-buy-button" target="_blank">
+            <a
+              href="https://golroblox.vercel.app/"
+              class="flashsale-buy-button"
+              target="_blank"
+            >
               <div class="p">Beli</div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -387,14 +391,14 @@
             atau kunjungi sosial media kami:
           </div>
           <div class="logo-container">
-            <a href="https://www.google.com/" target="_blank">
+            <a href="https://www.instagram.com/golroblox_/" target="_blank">
               <img src="instagram-logo.png" alt="instagram logo" />
             </a>
-            <a href="https://www.google.com/" target="_blank">
-              <img src="youtube-logo.png" alt="instagram logo" />
+            <a href="https://www.youtube.com/@golroblox" target="_blank">
+              <img src="youtube-logo.png" alt="youtube logo" />
             </a>
-            <a href="https://www.google.com/" target="_blank">
-              <img src="tiktok-logo.png" alt="instagram logo" />
+            <a href="https://www.tiktok.com/@golroblox_" target="_blank">
+              <img src="tiktok-logo.png" alt="tiktok logo" />
             </a>
           </div>
           <div class="p" id="copyright">
