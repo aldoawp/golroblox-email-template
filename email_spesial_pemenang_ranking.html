@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter"
+      rel="stylesheet"
+    />
+    <title>Subject: Pesanan [ID] Berhasil Dibuat</title>
+    <style>
+      body {
+        font-family: "Inter";
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+
+      .email-container {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        max-width: 600px;
+        min-width: 250px;
+        width: 100%;
+        gap: 20px;
+      }
+
+      #logo {
+        width: 40px;
+        height: auto;
+      }
+
+      .body-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 32px;
+        padding: 20px;
+        border-radius: 4px;
+        border: 1px solid #a1a1a1;
+      }
+
+      /* --- START: Table Styling --- */
+
+      .ringkasan-container {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .table-container {
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid #a1a1a1;
+        border-radius: 4px;
+        padding: 12px;
+        background-color: #fff;
+      }
+
+      .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #e0e0e0;
+        padding: 10px 0;
+      }
+
+      .row:last-child {
+        border-bottom: none;
+      }
+
+      .label {
+        font-size: 14px;
+        color: #636363;
+      }
+
+      .value {
+        font-size: 14px;
+        color: #0f0f0f;
+      }
+
+      .table-container .row:first-child .value {
+        color: #31c774;
+      }
+
+      /* --- END: Table Styling --- */
+
+      /* --- START: Button Styling --- */
+      .button {
+        display: inline-flex;
+        align-items: center;
+        align-self: center;
+        justify-content: space-between;
+        gap: 8px;
+        width: fit-content;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+        background-color: #31c774;
+        border-radius: 4px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .button:hover {
+        background-color: #28a745;
+      }
+
+      .button svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      /* --- END: Button Styling --- */
+
+      /* --- START: Footer Styling --- */
+      .footer {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .footer .logo-container {
+        display: flex;
+        align-self: center;
+        gap: 8px;
+      }
+
+      .footer .logo-container img {
+        width: 32px;
+        height: 32px;
+      }
+
+      .footer .logo-container a {
+        text-decoration: none;
+      }
+
+      #copyright {
+        font-size: 12px;
+        text-align: center;
+      }
+      /* --- END: Footer Styling --- */
+
+      /* Text Styling */
+      .h1 {
+        font-size: 16px;
+        font-weight: bold;
+        color: #0f0f0f;
+      }
+
+      .p {
+        font-size: 14px;
+        text-align: justify;
+        color: #0f0f0f;
+      }
+
+      .footer .p {
+        color: #636363;
+      }
+
+      .text-section {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      /* Other Styling*/
+      .divider {
+        box-sizing: border-box;
+        width: 100%;
+        height: 1px;
+        background-color: #a1a1a1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-container">
+      <div class="logo-container">
+        <img src="logo.png" alt="golroblox logo" id="logo" />
+      </div>
+      <div class="body-content">
+        <!-- Texts section -->
+        <div class="h1">Halo [Nama Pelanggan],</div>
+        <div class="p">
+          Selamat atas pencapaianmu meraih <b>Ranking [#X]</b> Mingguan di
+          Golroblox! Ini adalah prestasi luar biasa, dan kami ingin memberikan
+          apresiasi khusus untuk kamu. Kami menyediakan
+          <b>kode diskon spesial</b> yang bisa kamu gunakan pada pembelian
+          berikutnya:
+        </div>
+
+        <!-- Ringkasan pembelian section -->
+        <div class="table-container">
+          <div class="row">
+            <div class="label">Kode Diskon:</div>
+            <div class="value"><b>[KODE DISKON]</b></div>
+          </div>
+          <div class="row">
+            <div class="label">Besaran Diskon:</div>
+            <div class="value">[Jumlah atau Persentase Diskon]</div>
+          </div>
+          <div class="row">
+            <div class="label">Berlaku Hingga:</div>
+            <div class="value">[Tanggal Kedaluwarsa]</div>
+          </div>
+        </div>
+
+        <div class="text-section">
+          <div class="p">
+            Pastikan kamu memasukkan kode di atas saat proses checkout untuk
+            menikmati potongan harga. Jangan sampai ketinggalan, ya!
+          </div>
+          <div class="p">
+            Terima kasih sudah menjadi bagian dari Golroblox. Kami bangga atas
+            pencapaianmu dan menantikan pembelian berikutnya darimu!
+          </div>
+        </div>
+
+        <div class="p">Hormat Kami,<br /><b>Tim Golroblox</b></div>
+
+        <!-- Footer section -->
+        <div class="footer">
+          <div class="divider"></div>
+          <div class="p">
+            Ini adalah pesan email otomatis, mohon untuk tidak membalas email
+            ini. Untuk mendapatkan bantuan, silahkan klik link berikut
+            <a
+              href="https://api.whatsapp.com/send/?phone=6283806072002&text&type=phone_number&app_absent=0"
+              target="_blank"
+              >layanan pelanggan</a
+            >
+            atau kunjungi sosial media kami:
+          </div>
+          <div class="logo-container">
+            <a href="https://www.google.com/" target="_blank">
+              <img src="instagram-logo.png" alt="instagram logo" />
+            </a>
+            <a href="https://www.google.com/" target="_blank">
+              <img src="youtube-logo.png" alt="instagram logo" />
+            </a>
+            <a href="https://www.google.com/" target="_blank">
+              <img src="tiktok-logo.png" alt="instagram logo" />
+            </a>
+          </div>
+          <div class="p" id="copyright">
+            © 2025 Golroblox. All right reserved.
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
