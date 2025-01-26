@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter"
+      rel="stylesheet"
+    />
+    <title>Subject: Pesanan [ID] Berhasil Dibuat</title>
+    <style>
+      body {
+        font-family: "Inter";
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+
+      .email-container {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        max-width: 600px;
+        min-width: 250px;
+        width: 100%;
+        gap: 20px;
+      }
+
+      #logo {
+        width: 40px;
+        height: auto;
+      }
+
+      .body-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 32px;
+        padding: 20px;
+        border-radius: 4px;
+        border: 1px solid #a1a1a1;
+      }
+
+      /* --- START: Footer Styling --- */
+      .footer {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .footer .logo-container {
+        display: flex;
+        align-self: center;
+        gap: 8px;
+      }
+
+      .footer .logo-container img {
+        width: 32px;
+        height: 32px;
+      }
+
+      .footer .logo-container a {
+        text-decoration: none;
+      }
+
+      #copyright {
+        font-size: 12px;
+        text-align: center;
+      }
+      /* --- END: Footer Styling --- */
+
+      /* Text Styling */
+      .h1 {
+        font-size: 16px;
+        font-weight: bold;
+        color: #0f0f0f;
+      }
+
+      .p {
+        font-size: 14px;
+        text-align: justify;
+        color: #0f0f0f;
+      }
+
+      .footer .p {
+        color: #636363;
+      }
+
+      .text-section {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      /* Other Styling*/
+      .divider {
+        box-sizing: border-box;
+        width: 100%;
+        height: 1px;
+        background-color: #a1a1a1;
+      }
+
+      .body-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .body-title svg {
+        width: 24px;
+      }
+
+      .body-title .h1 {
+        font-size: 24px;
+        background: linear-gradient(180deg, #ef8100 0%, #ffa63e 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .body-title-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+      }
+
+      #flashsale-date {
+        color: #31c774;
+      }
+
+      #discount-code {
+        color: #31c774;
+      }
+
+      /* --- START: Flashsale Styling --- */
+      .flashsale-flex {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        box-sizing: border-box;
+        width: 100%;
+      }
+
+      .flashsale-container {
+        position: relative;
+        display: flex;
+        gap: 12px;
+        width: 100%;
+      }
+
+      .flashsale {
+        position: relative;
+        display: flex;
+        padding: 12px;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #31c774;
+        border-radius: 6px;
+        width: 100%;
+        z-index: 20;
+      }
+
+      .flashsale-badge {
+        background-color: #f94d63;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        padding-left: 8px;
+        padding-right: 8px;
+        width: fit-content;
+        border-radius: 6px;
+        position: absolute;
+        top: -14px;
+        left: -13px;
+        z-index: 30;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+      }
+
+      #katik-badge {
+        position: absolute;
+        background-color: #f94d63;
+        width: 20px;
+        height: 20px;
+        top: -6px;
+        left: -8px;
+        z-index: 10;
+        rotate: 45deg;
+      }
+
+      #p-badge {
+        font-size: 12px;
+        font-weight: bold;
+        color: white;
+      }
+
+      .flashsale .p {
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+      }
+
+      .flashsale .price .p:first-child {
+        color: red;
+        text-decoration: line-through;
+        font-size: 14px;
+        font-weight: normal;
+      }
+
+      .flashsale-left {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .flashsale-img {
+        height: 40px;
+        width: 40px;
+      }
+
+      .flashsale-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .flashsale-buy-button {
+        display: flex;
+        background-color: #31c774;
+        align-items: center;
+        gap: 8px;
+        padding: 12px;
+        border-radius: 6px;
+      }
+
+      .flashsale-buy-button .p {
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .flashsale-buy-button svg {
+        width: 20px;
+        color: white;
+      }
+      /* --- END: Flashsale Styling --- */
+    </style>
+  </head>
+  <body>
+    <div class="email-container">
+      <div class="logo-container">
+        <img src="logo.png" alt="golroblox logo" id="logo" />
+      </div>
+      <div class="body-content">
+        <!-- Body title -->
+        <div class="body-title-container">
+          <div class="body-title">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              class="size-6"
+            >
+              <defs>
+                <linearGradient
+                  id="gradientId"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="0%"
+                >
+                  <stop offset="0%" stop-color="#ef8100" />
+                  <stop offset="100%" stop-color="#ffa63e" />
+                </linearGradient>
+              </defs>
+              <path
+                fill="url(#gradientId)"
+                fill-rule="evenodd"
+                d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            <div class="h1">FLASHSALE</div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              class="size-6"
+            >
+              <defs>
+                <linearGradient
+                  id="gradientId"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="0%"
+                >
+                  <stop offset="0%" stop-color="#ef8100" />
+                  <stop offset="100%" stop-color="#ffa63e" />
+                </linearGradient>
+              </defs>
+              <path
+                fill="url(#gradientId)"
+                fill-rule="evenodd"
+                d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <div class="p">
+            Berlaku hingga:
+            <span id="flashsale-date"><b>23 Januari 2025</b></span>
+          </div>
+        </div>
+
+        <div class="p">
+          Masukkan kode diskon berikut:
+          <span id="discount-code"><b>[KODE DISKON]</b></span> dan dapatkan
+          potongan harga sebesar <b>[PERSEN DISKON]</b> untuk setiap pembelian
+          robux.
+        </div>
+
+        <!-- Flashsale section -->
+        <div class="flashsale-flex">
+          <div class="flashsale-container">
+            <div class="flashsale-badge">
+              <div id="p-badge">50% Off</div>
+            </div>
+            <div id="katik-badge"></div>
+            <div class="flashsale">
+              <div class="flashsale-left">
+                <div class="flashsale-img">
+                  <img src="robux-logo-white.png" alt="robux logo" />
+                </div>
+                <div class="p">100 Robux</div>
+              </div>
+              <div class="price">
+                <div class="p">Rp10.000</div>
+                <div class="p">Rp8.000</div>
+              </div>
+            </div>
+            <div class="flashsale-buy-button">
+              <div class="p">Beli</div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer section -->
+        <div class="footer">
+          <div class="divider"></div>
+          <div class="p">
+            Ini adalah pesan email otomatis, mohon untuk tidak membalas email
+            ini. Untuk mendapatkan bantuan, silahkan klik link berikut
+            <a
+              href="https://api.whatsapp.com/send/?phone=6283806072002&text&type=phone_number&app_absent=0"
+              target="_blank"
+              >layanan pelanggan</a
+            >
+            atau kunjungi sosial media kami:
+          </div>
+          <div class="logo-container">
+            <a href="https://www.google.com/" target="_blank">
+              <img src="instagram-logo.png" alt="instagram logo" />
+            </a>
+            <a href="https://www.google.com/" target="_blank">
+              <img src="youtube-logo.png" alt="instagram logo" />
+            </a>
+            <a href="https://www.google.com/" target="_blank">
+              <img src="tiktok-logo.png" alt="instagram logo" />
+            </a>
+          </div>
+          <div class="p" id="copyright">
+            © 2025 Golroblox. All right reserved.
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
