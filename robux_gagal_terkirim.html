@@ -143,9 +143,9 @@
       />
       <div class="body-content">
         <!-- Texts section -->
-        <div class="h1">Halo [Nama Pelanggan],</div>
+        <div class="h1">Halo {{userFirstName}},</div>
         <div class="p">
-          Berdasarkan ID Pesanan <b>[NOMOR PESANAN]</b>, kami melihat bahwa kamu
+          Berdasarkan ID Pesanan <b>{{orderId}}</b>, kami melihat bahwa kamu
           telah mengatur harga Gamepass di luar instruksi website Golroblox.
           Agar proses pembelian dapat dilanjutkan, mohon segera perbarui harga
           Gamepass tersebut sesuai dengan nominal berikut:
@@ -155,7 +155,7 @@
           <div class="robux-img-container">
             <img src="robux-logo.png" alt="robux logo" />
           </div>
-          <div class="h1-large">1090 Robux</div>
+          <div class="h1-large">{{robuxNominal}} Robux</div>
         </div>
 
         <div class="p">

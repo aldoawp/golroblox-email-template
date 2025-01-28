@@ -69,6 +69,7 @@
 
       /* Product Card Styling */
       .product-container {
+        box-sizing: border-box;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 32px;
@@ -78,6 +79,7 @@
       }
 
       .product {
+        box-sizing: border-box;
         border: 1px solid #a1a1a1;
         border-radius: 12px;
         overflow: hidden;
@@ -105,18 +107,12 @@
         display: inline-block;
         vertical-align: middle;
         margin-right: 8px;
+        font-size: 20px;
       }
 
       .product .product-content-title svg {
         display: inline-block;
         vertical-align: middle;
-      }
-
-      .product .product-content-title .h1 {
-        font-size: 20px;
-      }
-
-      .product .product-content-title svg {
         width: 24px;
         color: #31c774;
       }
@@ -257,7 +253,7 @@
             </div>
             <div class="product-content">
               <div class="product-content-title">
-                <div class="h1">Blox Fruit</div>
+                <div class="h1">{{gameName}}</div>
                 <a href="https://golroblox.vercel.app/" target="_blank">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -276,8 +272,8 @@
                 </a>
               </div>
               <div class="product-price">
-                <div class="p">Rp10.000</div>
-                <div class="p">Rp8.000</div>
+                <div class="p">Rp{{initialPrice}}</div>
+                <div class="p">Rp{{discountedPrice}}</div>
               </div>
             </div>
           </div>
