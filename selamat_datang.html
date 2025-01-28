@@ -11,56 +11,48 @@
     <style>
       body {
         font-family: "Inter";
-        display: flex;
-        flex-direction: column;
         align-items: center;
         height: 100vh;
-        margin: 0;
-        padding: 0;
+        margin: 0px;
+        padding: 0px;
       }
 
       .email-container {
         padding: 1rem;
-        display: flex;
-        flex-direction: column;
         box-sizing: border-box;
         max-width: 600px;
         min-width: 250px;
         width: 100%;
-        gap: 20px;
+        margin: 0px auto;
       }
 
       #logo {
         width: 40px;
         height: auto;
+        margin-bottom: 20px;
       }
 
+      /* BODY CONTENT STYLING */
       .body-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 32px;
         padding: 20px;
         border-radius: 4px;
         border: 1px solid #a1a1a1;
       }
 
-      /* --- START: Text Section --- */
-      .text-section {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
+      .body-content .h1 {
+        margin-bottom: 32px;
       }
-      /* --- END: Text Section --- */
 
-      /* --- START: Button Styling --- */
+      .body-content .p {
+        margin-bottom: 32px;
+      }
+
+      /* BUTTON STYLING */
       .button {
-        display: inline-flex;
-        align-items: center;
-        align-self: center;
-        justify-content: space-between;
-        gap: 8px;
         width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 32px;
         padding: 10px 20px;
         font-size: 16px;
         font-weight: 600;
@@ -76,40 +68,58 @@
         background-color: #28a745;
       }
 
+      .button a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .button span {
+        vertical-align: middle;
+        margin-right: 4px;
+      }
+
       .button svg {
         width: 24px;
         height: 24px;
+        vertical-align: middle;
       }
 
-      /* --- END: Button Styling --- */
-
-      /* --- START: Footer Styling --- */
+      /* FOOTER STYLING */
       .footer {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
+        text-align: center;
+        font-size: 12px;
+        color: #636363;
+        color: #636363;
       }
 
-      .footer .logo-container {
-        display: flex;
-        align-self: center;
-        gap: 8px;
+      .footer .p {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: #636363;
       }
 
-      .footer .logo-container img {
+      .footer .p:last-child {
+        margin-bottom: 0px;
+      }
+
+      .logo-container {
+        margin-bottom: 20px;
+      }
+
+      .logo-container a {
+        text-decoration: none;
+      }
+
+      .logo-container img {
+        margin: 0 5px;
         width: 32px;
         height: 32px;
-      }
-
-      .footer .logo-container a {
-        text-decoration: none;
       }
 
       #copyright {
         font-size: 12px;
         text-align: center;
       }
-      /* --- END: Footer Styling --- */
 
       /* Text Styling */
       .h1 {
@@ -124,8 +134,12 @@
         color: #0f0f0f;
       }
 
-      .footer .p {
-        color: #636363;
+      .text-section .p {
+        margin-bottom: 16px;
+      }
+
+      .text-section .p:last-child {
+        margin-bottom: 32px;
       }
 
       /* Other Styling*/
@@ -139,9 +153,11 @@
   </head>
   <body>
     <div class="email-container">
-      <div class="logo-container">
-        <img src="logo.png" alt="golroblox logo" id="logo" />
-      </div>
+      <img
+        src="https://mpzmobbovlpcjgdocuyh.supabase.co/storage/v1/object/public/web_assets/email/logo.png?t=2025-01-27T03%3A00%3A44.677Z"
+        alt="golroblox logo"
+        id="logo"
+      />
       <div class="body-content">
         <!-- Texts section -->
         <div class="h1">Halo [Nama Pelanggan],</div>
@@ -158,23 +174,25 @@
         </div>
 
         <!-- CTA Button -->
-        <a href="#" class="button">
-          Lihat Detail Pesanan
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            class="size-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-            />
-          </svg>
-        </a>
+        <div class="button">
+          <a href="#">
+            <span>Lihat Detail Pesanan</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+              />
+            </svg>
+          </a>
+        </div>
 
         <div class="p">Hormat kami,<br /><b>Tim Golroblox</b></div>
 
@@ -192,14 +210,23 @@
             atau kunjungi sosial media kami:
           </div>
           <div class="logo-container">
-            <a href="https://www.google.com/" target="_blank">
-              <img src="instagram-logo.png" alt="instagram logo" />
+            <a href="https://www.instagram.com/golroblox_/" target="_blank">
+              <img
+                src="https://mpzmobbovlpcjgdocuyh.supabase.co/storage/v1/object/public/web_assets/email/instagram-logo.png"
+                alt="instagram logo"
+              />
             </a>
-            <a href="https://www.google.com/" target="_blank">
-              <img src="youtube-logo.png" alt="instagram logo" />
+            <a href="https://www.youtube.com/@golroblox" target="_blank">
+              <img
+                src="https://mpzmobbovlpcjgdocuyh.supabase.co/storage/v1/object/public/web_assets/email/youtube-logo.png?t=2025-01-27T03%3A02%3A08.652Z"
+                alt="youtube logo"
+              />
             </a>
-            <a href="https://www.google.com/" target="_blank">
-              <img src="tiktok-logo.png" alt="instagram logo" />
+            <a href="https://www.tiktok.com/@golroblox_" target="_blank">
+              <img
+                src="https://mpzmobbovlpcjgdocuyh.supabase.co/storage/v1/object/public/web_assets/email/tiktok-logo.png?t=2025-01-27T03%3A02%3A17.208Z"
+                alt="tiktok logo"
+              />
             </a>
           </div>
           <div class="p" id="copyright">
